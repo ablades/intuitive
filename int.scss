@@ -6,6 +6,11 @@ $font-size: 2em;
 $margin-default: 1em 1em 1em 1em;
 $font-family: 'Courier New', monospace, Courier;
 
+//Colors
+$flame: rgba(238, 86, 34, 1);
+$marigold: rgba(236, 167, 44, 1);
+$darkspring: rbga(19, 117, 71, 1);
+
 :root {
     #{--font}: $font-family;
     #{--font-size}: $font-size;
