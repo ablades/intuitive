@@ -1,12 +1,18 @@
+:root {
+  --font: "Courier New", monospace, Courier;
+  --font-size: 2em;
+  --font-color: #f3f3f4;
+}
+
 body {
-  font-family: "Courier New", monospace, Courier;
-  font-size: 4em;
+  font-family: var(--font);
+  font-size: var(--font-size);
   font-variant: normal;
   font-weight: normal;
   line-height: 3em;
   line-height-step: 1em;
   background-color: black;
-  color: white;
+  color: var(--font-color);
 }
 
 /*# sourceMappingURL=int.css.map */
