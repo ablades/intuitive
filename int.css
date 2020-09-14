@@ -1,7 +1,10 @@
 :root {
+  --bg-color: #041f1e;
   --font: "Courier New", monospace, Courier;
   --font-size: 2em;
   --font-color: #f3f3f4;
+  --nav-bgcolor: #eca72c;
+  --nav-itemhovcolor: #ee5622;
 }
 
 body {
@@ -11,8 +14,43 @@ body {
   font-weight: normal;
   line-height: 3em;
   line-height-step: 1em;
-  background-color: black;
+  background-color: var(--bg-color);
   color: var(--font-color);
+}
+body h1 {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: var(--nav-bgcolor);
+}
+nav.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+nav.navbar li {
+  border-right: 0.1em solid black;
+  border-right: 0.1em solid black;
+}
+nav.navbar li:hover {
+  background-color: var(--nav-itemhovcolor);
+}
+nav.navbar a {
+  display: block;
+  padding: 0.5em 1em;
+  color: var(--font-color);
+  text-decoration: none;
+  background-color: var(--color-foreground);
+  transition: 400ms;
 }
 
 /*# sourceMappingURL=int.css.map */
