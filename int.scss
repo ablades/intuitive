@@ -55,15 +55,60 @@ nav.navbar {
         justify-content: flex-start;
         align-items: baseline;
 
+        // Nav Item
+        li{
+            position: relative;
+            // Sublist
+            ul {
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.5s ease;
+                position: absolute;
+                margin-top: 1rem;
+                left: 0;
+                display: none;
+
+                // Sub Menu Item
+                li {
+                    clear: both;
+                    width: 100%;
+                    margin: 30px;
+                }
+
+            }
+        }
+
+        // Nav Item Hover
+        li:hover{
+            // Nav Item Sublist
+            ul {
+                visibility: visible;
+                opacity: 1;
+                position: absolute;
+                display: block;
+            }
+
+            li:hover {
+                background-color: lightblue;
+            }
+        }
+
     }
 
     li {
         border-right: .1em solid black;
         border-right: .1em solid black;
+        display: block;
+        float: left;
+        padding: .4rem;
+        position: relative;
+        text-decoration: none;
+        transition-duration: 0.5s;
     }
 
     li:hover {
         background-color: var(--nav-itemhovcolor);
+          
     }
 
     a {

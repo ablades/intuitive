@@ -37,9 +37,41 @@ nav.navbar ul {
   justify-content: flex-start;
   align-items: baseline;
 }
+nav.navbar ul li {
+  position: relative;
+}
+nav.navbar ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+  position: absolute;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+nav.navbar ul li ul li {
+  clear: both;
+  width: 100%;
+  margin: 30px;
+}
+nav.navbar ul li:hover ul {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  display: block;
+}
+nav.navbar ul li:hover li:hover {
+  background-color: lightblue;
+}
 nav.navbar li {
   border-right: 0.1em solid black;
   border-right: 0.1em solid black;
+  display: block;
+  float: left;
+  padding: 0.4rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
 }
 nav.navbar li:hover {
   background-color: var(--nav-itemhovcolor);
