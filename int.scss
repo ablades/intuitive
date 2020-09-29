@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+$padding: 1em;
+$default-font-size: 70px;
+$font-fam: 'Mulish';
+
+
+:root{
+    --font-style: $font-fam
+}
+
+body{
+    font-family: var(--font-style);
+    font-size: var(--default-font-size);
+}
+
+
+h1 {
+    font-family: var(--font-style);
+    color: red;
+}
