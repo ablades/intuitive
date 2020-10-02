@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 :root {
-  --font-style: $font-fam ;
+  --font-style: Mulish, sans-serif;
 }
 
 body {

@@ -2,11 +2,10 @@
 
 $padding: 1em;
 $default-font-size: 70px;
-$font-fam: 'Mulish';
-
+$font-fam: 'Mulish', sans-serif;
 
 :root{
-    --font-style: $font-fam
+    --font-style: #{$font-fam};
 }
 
 body{
