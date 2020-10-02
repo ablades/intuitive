@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 :root {
   --font-style: Mulish, sans-serif;
-  --default-font-size: 1.5em;
+  --default-font-size: 1.2em;
   --padding: 0.5em;
   --bg-color: #0a0a0a;
   --text-color: white;
@@ -31,7 +31,7 @@ h1 h2 h3 h4 h5 h6 {
   align-items: baseline;
   background-color: var(--sapphire);
   margin: 0;
-  font-size: var(1.5em);
+  font-size: var(--default-font-size);
 }
 .navbar .title {
   margin: 10px;
@@ -87,6 +87,29 @@ h1 h2 h3 h4 h5 h6 {
   margin: 0;
   font-size: 1.5em;
   font-weight: normal;
+}
+
+button {
+  color: var(--text-color);
+  border: 2px solid var(--apricot);
+  padding: 1em;
+  border-radius: 7px 7px 7px 7px;
+  font-family: var(--font-style);
+  font-size: 1em;
+  background-color: var(--sapphire);
+}
+
+button:hover {
+  color: var(--text-color);
+  background-color: var(--apricot);
+}
+
+button[name=go] {
+  background-color: #6bc253;
+}
+
+button[name=delete] {
+  background-color: #f85353;
 }
 
 /*# sourceMappingURL=int.css.map */
