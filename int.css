@@ -1,16 +1,92 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 :root {
   --font-style: Mulish, sans-serif;
+  --default-font-size: 1.5em;
+  --padding: 0.5em;
+  --bg-color: #0a0a0a;
+  --text-color: white;
+  --apricot: #ffc480;
+  --sapphire: #006594;
 }
 
 body {
   font-family: var(--font-style);
   font-size: var(--default-font-size);
+  padding: var(--padding);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
-h1 {
+h1 h2 h3 h4 h5 h6 {
+  color: var(--color-dark);
+  font-family: var(--caps);
+  padding: 1.5em;
+  font-weight: normal;
+  margin: 0.5em 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: var(--sapphire);
+  margin: 0;
+  font-size: var(1.5em);
+}
+.navbar .title {
+  margin: 10px;
+  padding: 5px;
   font-family: var(--font-style);
-  color: red;
+  color: var(--text-color);
+}
+.navbar > ul, .navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+.navbar > ul > li, .navbar ul > li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.navbar > ul > li > a, .navbar ul > li > a {
+  display: block;
+  padding: 1.5em;
+  color: var(--text-color);
+  text-decoration: none;
+}
+.navbar > ul > li a:hover, .navbar ul > li a:hover {
+  color: var(--apricot);
+  border-bottom: 2px solid var(--apricot);
+}
+.navbar > ul > li a:active, .navbar ul > li a:active {
+  background-color: var(--apricot);
+  color: var(--apricot);
+  filter: none;
+}
+.navbar > ul > li > ul, .navbar ul > li > ul {
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  left: 0;
+  display: none;
+}
+.navbar > ul li:hover > ul,
+.navbar > ul li:hover .navbar ul li ul:hover, .navbar ul li:hover > ul,
+.navbar ul li:hover .navbar ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+.navbarh1 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: normal;
 }
 
 /*# sourceMappingURL=int.css.map */

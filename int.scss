@@ -1,20 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 
-$padding: 1em;
-$default-font-size: 70px;
+$padding: .5em;
+$default-font-size: 1.5em;
 $font-fam: 'Mulish', sans-serif;
+$bg-color: hsla(0, 0%, 4%, 1);
+$text-color: hsla(0, 0%, 100%, 1);
+$uranium-blue: hsla(201, 100%, 86%, 1);
+$mellow-apricot: hsla(32, 100%, 75%, 1);
+$sapphire-blue: hsla(199, 100%, 29%, 1);
 
 :root{
     --font-style: #{$font-fam};
+    --default-font-size: #{$default-font-size};
+    --padding: #{$padding};
+    --bg-color: #{$bg-color};
+    --text-color: #{$text-color};
+    --apricot: #{$mellow-apricot};
+    --sapphire: #{$sapphire-blue};
 }
 
 body{
     font-family: var(--font-style);
     font-size: var(--default-font-size);
+    padding: var(--padding);
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
+h1 h2 h3 h4 h5 h6 {
+    color: var(--color-dark);
+    font-family: var(--caps);
+    padding: 1.5em;
+    font-weight: normal;
+    margin: 0.5em 0;
+}
 
-h1 {
-    font-family: var(--font-style);
-    color: red;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: var(--sapphire);
+    margin: 0;
+    font-size: var($default-font-size);
+
+    & .title {
+        margin: 10px;
+        padding: 5px;
+        font-family: var(--font-style);
+        color: var(--text-color);
+    }
+
+    &>ul, ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: baseline;
+
+        &>li {
+            position: relative;
+            padding: 0;
+            margin: 0;
+
+            &>a {
+                display: block;
+                padding: 1.5em;
+                color: var(--text-color);
+                text-decoration: none;
+            }
+
+            & a:hover {
+                color: var(--apricot);
+                border-bottom: 2px solid var(--apricot);
+            }
+
+            & a:active {
+                background-color: var(--apricot);
+                color: var(--apricot);
+                filter: none;
+            }
+
+            &>ul {
+                visibility: hidden;
+                opacity: 0;
+                min-width: 5rem;
+                position: absolute;
+                left: 0;
+                display: none;
+            }
+        }
+
+        & li:hover {
+            &>ul,
+            .navbar ul li ul:hover {
+                visibility: visible;
+                opacity: 1;
+                display: block;
+            }
+        }
+    }
+
+    &h1 {
+        margin: 0;
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+
 }
