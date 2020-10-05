@@ -166,6 +166,26 @@ nav a {
   --color-sample-99: hsl(99, 100%, 50%);
 }
 
+button.remove-one {
+  background-color: #f85353;
+}
+
+button.remove {
+  background-color: #DD0426;
+}
+
+button.add-one {
+  background-color: #6bc253;
+}
+
+#cart #items li {
+  padding: 10px;
+  margin: 10px;
+  list-style: none;
+  border-radius: 20px 20px 20px 20px;
+  border: 5px solid var(--sapphire);
+}
+
 /* --------------------- */
 .navbar {
   display: flex;
@@ -235,6 +255,7 @@ button {
   color: var(--text-color);
   border: 2px solid var(--apricot);
   padding: 1em;
+  margin: 10px;
   border-radius: 7px 7px 7px 7px;
   font-family: var(--font-style);
   font-size: 1em;
@@ -257,10 +278,14 @@ button[name=delete] {
 form {
   display: flex;
   flex-direction: column;
+  border: 10px solid var(--sapphire);
+  padding: 10px;
+  border-radius: 20px 20px 20px 20px;
   font-size: 20px;
   font-family: var(--font-style);
 }
 form label {
+  padding: 10px;
   color: var(--sapphire);
 }
 form label input[type=checkbox] {
