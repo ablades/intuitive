@@ -8,7 +8,6 @@ $text-color: hsla(0, 0%, 100%, 1);
 $uranium-blue: hsla(201, 100%, 86%, 1);
 $mellow-apricot: hsla(32, 100%, 75%, 1);
 $sapphire-blue: hsla(199, 100%, 29%, 1);
-
 :root{
     --font-style: #{$font-fam};
     --default-font-size: #{$default-font-size};
@@ -25,6 +24,7 @@ body{
     padding: var(--padding);
     background-color: var(--bg-color);
     color: var(--text-color);
+    max-width: 100%;
 }
 
 h1 h2 h3 h4 h5 h6 {
@@ -33,6 +33,24 @@ h1 h2 h3 h4 h5 h6 {
     padding: 1.5em;
     font-weight: normal;
     margin: 0.5em 0;
+}
+
+
+/* FINAL PROPERTIES */ 
+
+#popular {
+    display: flex;
+}
+
+.card {
+    img {
+        max-width: 100%;
+    }
+    display: block;
+    position: flex;
+    text-align: center;
+    border: 5px solid red;
+    margin: 20px;
 }
 
 nav {
@@ -54,7 +72,17 @@ nav {
     }
 }
 
+.swatches {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
 
+    @for $i from 0 to 100 {
+        --color-sample-#{$i}: hsl(#{$i}, 100%, 50%);
+    }
+}
+
+/* --------------------- */ 
 .navbar {
     display: flex;
     justify-content: space-between;
