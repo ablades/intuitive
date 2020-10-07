@@ -68,6 +68,27 @@
 				</code>
 			</pre>
 		</section>
+
+
+		<section id="cards">
+			<h1>Card styles</h1>
+			<p></p>
+			<div class="card">
+				<img src="img_avatar.png" alt="Avatar" style="width:100%">
+				<div class="container">
+				  <h4><b>John Doe</b></h4>
+				  <p>Architect & Engineer</p>
+				</div>
+			  </div>
+
+			  <div class="card">
+				<img src="img_avatar.png" alt="Avatar" style="width:100%">
+				<div class="container">
+				  <h4><b>John Doe</b></h4>
+				  <p>Architect & Engineer</p>
+				</div>
+			  </div>
+		</section>
 		
 		<section id="forms">
 			<h2>Buttons</h2>
@@ -83,26 +104,18 @@
 			</pre>
 
 			<p>This button has consequences. You might want to think twice before clicking.</p>
-			<p>Custimize buttons by adding CSS variables inline or with a class.</p>
+			<p>Customize buttons by adding CSS variables inline or with a class.</p>
 			<p>
-<button name="delete"
-	style="--weight: bold; --background-color: #f85353;"
->Delete</button>
-	<button name="go"
-	style="--background-color: #6bc253;"
->Go!</button>
+	<button class="delete" name="delete">Delete</button>
+	<button class="go" name="go">Go!</button>
 			</p>
 
 			<pre>
 				<code>
-&lt;button 
-	style=&quot;--weight: bold; 
-	--background-color: #f85353;&quot;
-&gt;Delete&lt;/button&gt;
+&lt;button name=&quot;delete&quot;&gt; Delete &lt;/button&gt;
 
-&lt;button 
-	style=&quot;--background-color: #6bc253;&quot;
-&gt;Go!&lt;/button&gt;
+&lt;button name=&quot;go&quot;&gt; Go! &lt;/button&gt;
+
 				</code>
 			</pre>
 		</section>

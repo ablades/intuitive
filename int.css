@@ -36,8 +36,13 @@ section {
   display: flex;
 }
 
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .card {
-  display: block;
+  display: flex;
   position: flex;
   text-align: center;
   border: 5px solid red;
@@ -47,151 +52,10 @@ section {
   max-width: 100%;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  justify-content: space-between;
-  background-color: var(--sapphire);
-  margin: 0;
-  padding: 14px;
-  font-size: var(--default-font-size);
-}
-nav a {
-  float: left;
-  display: block;
-  text-align: center;
-  color: var(--text-color);
-  padding: 14px;
-  text-decoration: none;
+a {
+  color: var(--apricot);
 }
 
-.swatches {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 10px;
-  --color-sample-0: hsl(0, 100%, 50%);
-  --color-sample-1: hsl(1, 100%, 50%);
-  --color-sample-2: hsl(2, 100%, 50%);
-  --color-sample-3: hsl(3, 100%, 50%);
-  --color-sample-4: hsl(4, 100%, 50%);
-  --color-sample-5: hsl(5, 100%, 50%);
-  --color-sample-6: hsl(6, 100%, 50%);
-  --color-sample-7: hsl(7, 100%, 50%);
-  --color-sample-8: hsl(8, 100%, 50%);
-  --color-sample-9: hsl(9, 100%, 50%);
-  --color-sample-10: hsl(10, 100%, 50%);
-  --color-sample-11: hsl(11, 100%, 50%);
-  --color-sample-12: hsl(12, 100%, 50%);
-  --color-sample-13: hsl(13, 100%, 50%);
-  --color-sample-14: hsl(14, 100%, 50%);
-  --color-sample-15: hsl(15, 100%, 50%);
-  --color-sample-16: hsl(16, 100%, 50%);
-  --color-sample-17: hsl(17, 100%, 50%);
-  --color-sample-18: hsl(18, 100%, 50%);
-  --color-sample-19: hsl(19, 100%, 50%);
-  --color-sample-20: hsl(20, 100%, 50%);
-  --color-sample-21: hsl(21, 100%, 50%);
-  --color-sample-22: hsl(22, 100%, 50%);
-  --color-sample-23: hsl(23, 100%, 50%);
-  --color-sample-24: hsl(24, 100%, 50%);
-  --color-sample-25: hsl(25, 100%, 50%);
-  --color-sample-26: hsl(26, 100%, 50%);
-  --color-sample-27: hsl(27, 100%, 50%);
-  --color-sample-28: hsl(28, 100%, 50%);
-  --color-sample-29: hsl(29, 100%, 50%);
-  --color-sample-30: hsl(30, 100%, 50%);
-  --color-sample-31: hsl(31, 100%, 50%);
-  --color-sample-32: hsl(32, 100%, 50%);
-  --color-sample-33: hsl(33, 100%, 50%);
-  --color-sample-34: hsl(34, 100%, 50%);
-  --color-sample-35: hsl(35, 100%, 50%);
-  --color-sample-36: hsl(36, 100%, 50%);
-  --color-sample-37: hsl(37, 100%, 50%);
-  --color-sample-38: hsl(38, 100%, 50%);
-  --color-sample-39: hsl(39, 100%, 50%);
-  --color-sample-40: hsl(40, 100%, 50%);
-  --color-sample-41: hsl(41, 100%, 50%);
-  --color-sample-42: hsl(42, 100%, 50%);
-  --color-sample-43: hsl(43, 100%, 50%);
-  --color-sample-44: hsl(44, 100%, 50%);
-  --color-sample-45: hsl(45, 100%, 50%);
-  --color-sample-46: hsl(46, 100%, 50%);
-  --color-sample-47: hsl(47, 100%, 50%);
-  --color-sample-48: hsl(48, 100%, 50%);
-  --color-sample-49: hsl(49, 100%, 50%);
-  --color-sample-50: hsl(50, 100%, 50%);
-  --color-sample-51: hsl(51, 100%, 50%);
-  --color-sample-52: hsl(52, 100%, 50%);
-  --color-sample-53: hsl(53, 100%, 50%);
-  --color-sample-54: hsl(54, 100%, 50%);
-  --color-sample-55: hsl(55, 100%, 50%);
-  --color-sample-56: hsl(56, 100%, 50%);
-  --color-sample-57: hsl(57, 100%, 50%);
-  --color-sample-58: hsl(58, 100%, 50%);
-  --color-sample-59: hsl(59, 100%, 50%);
-  --color-sample-60: hsl(60, 100%, 50%);
-  --color-sample-61: hsl(61, 100%, 50%);
-  --color-sample-62: hsl(62, 100%, 50%);
-  --color-sample-63: hsl(63, 100%, 50%);
-  --color-sample-64: hsl(64, 100%, 50%);
-  --color-sample-65: hsl(65, 100%, 50%);
-  --color-sample-66: hsl(66, 100%, 50%);
-  --color-sample-67: hsl(67, 100%, 50%);
-  --color-sample-68: hsl(68, 100%, 50%);
-  --color-sample-69: hsl(69, 100%, 50%);
-  --color-sample-70: hsl(70, 100%, 50%);
-  --color-sample-71: hsl(71, 100%, 50%);
-  --color-sample-72: hsl(72, 100%, 50%);
-  --color-sample-73: hsl(73, 100%, 50%);
-  --color-sample-74: hsl(74, 100%, 50%);
-  --color-sample-75: hsl(75, 100%, 50%);
-  --color-sample-76: hsl(76, 100%, 50%);
-  --color-sample-77: hsl(77, 100%, 50%);
-  --color-sample-78: hsl(78, 100%, 50%);
-  --color-sample-79: hsl(79, 100%, 50%);
-  --color-sample-80: hsl(80, 100%, 50%);
-  --color-sample-81: hsl(81, 100%, 50%);
-  --color-sample-82: hsl(82, 100%, 50%);
-  --color-sample-83: hsl(83, 100%, 50%);
-  --color-sample-84: hsl(84, 100%, 50%);
-  --color-sample-85: hsl(85, 100%, 50%);
-  --color-sample-86: hsl(86, 100%, 50%);
-  --color-sample-87: hsl(87, 100%, 50%);
-  --color-sample-88: hsl(88, 100%, 50%);
-  --color-sample-89: hsl(89, 100%, 50%);
-  --color-sample-90: hsl(90, 100%, 50%);
-  --color-sample-91: hsl(91, 100%, 50%);
-  --color-sample-92: hsl(92, 100%, 50%);
-  --color-sample-93: hsl(93, 100%, 50%);
-  --color-sample-94: hsl(94, 100%, 50%);
-  --color-sample-95: hsl(95, 100%, 50%);
-  --color-sample-96: hsl(96, 100%, 50%);
-  --color-sample-97: hsl(97, 100%, 50%);
-  --color-sample-98: hsl(98, 100%, 50%);
-  --color-sample-99: hsl(99, 100%, 50%);
-}
-
-button.remove-one {
-  background-color: #f85353;
-}
-
-button.remove {
-  background-color: #DD0426;
-}
-
-button.add-one {
-  background-color: #6bc253;
-}
-
-#cart #items li {
-  padding: 10px;
-  margin: 10px;
-  list-style: none;
-  border-radius: 20px 20px 20px 20px;
-  border: 5px solid var(--sapphire);
-}
-
-/* --------------------- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -297,8 +161,24 @@ form label input[type=checkbox] {
   box-sizing: border-box;
   color: var(--sapphire);
 }
-form label input[placeholder] {
-  color: var(--sapphire);
+form label span {
+  font-size: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+form label textarea {
+  text-align: center;
+  border: none;
+  font-size: 25px;
+  background-color: white;
+  font-family: var(--font-style);
+}
+form label input {
+  text-align: center;
+  border: none;
+  font-size: 25px;
+  background-color: white;
 }
 
 /*# sourceMappingURL=int.css.map */
