@@ -1,4 +1,4 @@
-class toolToip extends HTMLElement {
+class ToolTip extends HTMLElement {
     constructor() {
         super();
 
@@ -23,11 +23,34 @@ class toolToip extends HTMLElement {
         if (!this._target){
             return;
         }
-        
+
         // add events
         this._target.addEventListener('focus', this._show);
         this._target.addEventListener('blur', this._hide);
         this._target.addEventListener('mouseenter', this._show);
         this._target.addEventListener('mouseleave', this._hide);
     }
+
+    disconnectedCallback() {
+        if (!this._target) {
+            return;  
+        }
+
+        this._target.removeEventListener('focus', this._show);
+        this._target.removeEventListener('blur', this._hide);
+        this._target.removeEventListener('mouseenter', this._show);
+        this._target.removeEventListener('mouseleave', this._hide);
+        this._target = null;
+    }
+
+    _show() {
+        this.hidden = false;
+      }
+    
+    _hide() {
+        this.hidden = true;
+    }
 }
+
+
+window.customElements.define('cust-tooltip', ToolTip);
