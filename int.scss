@@ -298,3 +298,27 @@ form {
   top: 0;
 }
 
+
+.page-footer {
+    background-color: var(--sapphire);
+    color: white;
+    display: flex;
+
+    & li {
+        list-style: none outside none;
+        
+        &>a {
+            display: block;
+            color: white;
+        }
+
+        & a:hover {
+            color: var(--apricot);
+        }
+
+        & a:active {
+            background-color: var(--sapphire);
+            color: var(--apricot);
+        }
+    }
+}

@@ -271,4 +271,24 @@ form label input {
   top: 0;
 }
 
+.page-footer {
+  background-color: var(--sapphire);
+  color: white;
+  display: flex;
+}
+.page-footer li {
+  list-style: none outside none;
+}
+.page-footer li > a {
+  display: block;
+  color: white;
+}
+.page-footer li a:hover {
+  color: var(--apricot);
+}
+.page-footer li a:active {
+  background-color: var(--sapphire);
+  color: var(--apricot);
+}
+
 /*# sourceMappingURL=int.css.map */
