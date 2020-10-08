@@ -18,6 +18,11 @@ $sapphire-blue: hsla(199, 100%, 29%, 1);
     --sapphire: #{$sapphire-blue};
 }
 
+p {
+    padding: var(--padding);
+    margin: .2em;
+}
+
 body{
     font-family: var(--font-style);
     font-size: var(--default-font-size);
@@ -206,5 +211,90 @@ form {
         }
 
     }
+}
+
+
+
+/* checkbox button base element */
+.int-checkbox > span {
+    display: inline-block;
+    // background-color: lightgray;
+  font-size: var(--default-font-size);
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+/* Selected "checkmark" styles */
+.int-checkbox > input[type=checkbox] + span::before {
+   display: block;
+   opacity: 0;
+   content: '';
+   width: 7px;
+   height: 13px;
+   border-right: 5px solid var(--sapphire);
+   border-bottom: 5px solid var(--sapphire);
+   transform: rotate(45deg);
+   position: absolute;
+   left: 5px;
+   top: 0px;
+   transition: 200ms;
+}
+
+.int-checkbox > input[type=checkbox]:checked + span::before {
+    opacity: 1;
+}
+/* Outline */
+.int-checkbox > input[type=checkbox] + span::after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Hide the input */
+.int-checkbox input, .int-radio input {
+    visibility: hidden;
+}
+.int-radio > span {
+  display: inline-block;
+  font-size: 20px;
+  position: relative;
+  margin: 20px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.int-radio > input[type=radio] + span::before {
+  display: block;
+  opacity: 0;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: var(--sapphire);
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  transition: 400ms;
+}
+
+.int-radio > input[type=radio]:checked + span::before {
+  opacity: 1;
+}
+.int-radio > input[type=radio] + span::after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
